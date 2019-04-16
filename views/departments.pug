@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	table.table.table-striped
+		tr
+			th Department
+		each row in results
+			tr
+				td=row.DEPARTMENT_NAME
