@@ -15,14 +15,14 @@ router.get('/db', async (req, res, next) => {
 	});
 
 	let results = await connection.execute(
-		'select * from hr.departments order by department_name',
+		'select * from hr.countries order by country_name',
 		[],
 		{
 			outFormat: oracledb.OBJECT
 		}
 	);
 
-	res.render('departments', { title: 'Node Tutorial', results: results.rows });
+	res.render('departments', { title: 'Countries', results: results.rows });
 });
 
 module.exports = router;

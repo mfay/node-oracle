@@ -4,7 +4,12 @@ block content
 	h1= title
 	table.table.table-striped
 		tr
-			th Department
+			th ID
+			th Country
+			th Region ID
 		each row in results
 			tr
-				td=row.DEPARTMENT_NAME
+				td=row.COUNTRY_ID
+				td
+					a(href=`/Node/edit/${row.COUNTRY_ID}`)=row.COUNTRY_NAME
+				td=row.REGION_ID
