@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/db', async (req, res, next) => {
 	let connection = await oracledb.getConnection({
 		user: 'system',
-		password: 'oracle1',
+		password: 'oracle',
 		connectString: 'oracle/XE'
 	});
 
@@ -22,7 +22,7 @@ router.get('/db', async (req, res, next) => {
 		}
 	);
 
-	res.render('departments', { title: 'Departments', results: results.rows });
+	res.render('departments', { title: 'Node Tutorial', results: results.rows });
 });
 
 module.exports = router;
